@@ -31,6 +31,8 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         min-coverage-overall: 40
         min-coverage-changed-files: 60
+
+        
     
     - name: Fail PR if overall coverage is less than 20%
       if: ${{ steps.jacoco.outputs.coverage-overall < 20.0 }}
